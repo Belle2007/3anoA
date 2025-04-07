@@ -1,41 +1,34 @@
-/* Uso das fontes diretamente no HTML para melhor desempenho */
-/* Removido o @import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
-/* Definindo as variáveis */
 :root {
     --laranja-claro: #FF862A;
-    --cor-principal: #CB6D43;
-    --cor-secundaria: #FAF4F4;
-    --fundo-formulario: #F1EDEF;
-    --fundo-branco: #ffffff;
 }
 
-/* Corpo do documento */
 body {
     font-size: 1rem;
-    font-family: 'Montserrat', sans-serif; /* Certifique-se de definir o fallback para fontes */
-    background-color: var(--fundo-branco);
+    font-family: 'Montserrat';
 }
 
-/* Cabeçalho */
 header {
-    background-color: var(--fundo-branco);
+    background-color: #ffffff;
 }
 
-/* Seções com espaçamento */
+
 section {
     padding-bottom: 5rem;
 }
 
-/* Links de navegação */
+
 .nav-link {
-    color: var(--cor-principal);
+    color: #CB6D43;
     font-weight: 600;
 }
 
-/* Fundo da seção inicial */
 .inicio-fundo {
+    /* aula 3 */
     background-image: url('img/4965007.jpg');
+    /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: right;
     border-radius: 80px;
@@ -43,12 +36,9 @@ section {
     height: 606px;
     padding: 40px;
     margin: 0 auto;
-    display: flex;
-    align-items: center; /* Centraliza conteúdo verticalmente */
-    justify-content: space-between; /* Espaçamento entre os elementos */
 }
 
-/* Estilizando a imagem na seção inicial */
+/* posicionamento para a imagem à direita */
 .img-inicio {
     position: absolute;
     right: 0;
@@ -57,7 +47,7 @@ section {
     height: auto;
 }
 
-/* Estilo do conteúdo à esquerda da seção inicial */
+
 .esquerda-conteudo {
     display: flex;
     flex-direction: column;
@@ -65,85 +55,88 @@ section {
     gap: 1rem;
 }
 
-/* Botão da seção inicial */
+
 .botao-inicio {
     background-color: var(--laranja-claro);
     border-radius: 30px;
     border: none;
     width: 14em;
+    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* Convertido para em */
+    align-content: center;
+
 }
 
-/* Efeito de sombra no título */
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
 }
 
-/* Estilo da seção "O que foi a Tropicália?" */
+
 #tropicalia {
     position: relative;
     padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat, 
-                url('img/flor-esquerda.png') bottom left no-repeat;
+    background: url('img/flor.png') top right no-repeat,
+        url('img/flor-esquerda.png') bottom left no-repeat;
     background-size: 180px 180px;
+    /* Ajuste o tamanho conforme necessário */
 }
 
-/* Conteúdo centralizado na seção "Tropicália" */
 #tropicalia .container {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 1;
+    /* Garante que o conteúdo fica acima das imagens do background */
 }
 
-/* Estilo do título da seção "O que foi a Tropicália?" */
+
 h2 {
     font-family: 'Lemon', serif;
     font-size: 2.5em;
+    font-style: normal;
     color: var(--laranja-claro);
 }
 
-/* Estilo da seção de galeria */
 #galeria {
-    background-color: var(--cor-secundaria);
+    background-color: #FAF4F4;
+
 }
 
-/* Fundo da galeria */
 .fundo-galeria {
     background: url('img/flor-bottom-direita.png') bottom right no-repeat;
     background-size: 180px 180px;
 }
 
-/* Seção de contato com imagem de fundo */
 #contato {
     background-image: url('img/4965007.jpg');
     background-size: cover;
     padding: 4rem 0;
+    /* Espaçamento interno para a seção de contato */
+
 }
 
-/* Estilo do formulário */
 .formulario {
-    background-color: var(--fundo-branco);
+    background-color: #ffffff;
     padding: 2rem;
+    /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
+    /* Borda arredondada para o formulário */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar o formulário */
     font-weight: bold;
 }
 
-/* Estilo do botão dentro do formulário */
 .formulario button {
-    background-color: var(--cor-principal);
+    background-color: #CB6D43;
     border: none;
     font-weight: bold;
 }
 
-/* Estilo de campos de formulário */
+/* chama classe do bootstrap para modificar a cor */
 .form-control {
-    background-color: var(--fundo-formulario);
+    background-color: #F1EDEF;
 }
